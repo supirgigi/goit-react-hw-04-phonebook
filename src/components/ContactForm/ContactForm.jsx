@@ -20,7 +20,7 @@ const ContactForm = ({ onSubmit }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    const newContact = { id: nanoid(), name, number };
+    const newContact = { id: nanoid(), ...state };
     onSubmit(newContact);
     setState({ ...initialState });
   };
