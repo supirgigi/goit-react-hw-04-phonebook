@@ -33,7 +33,7 @@ export const Button = styled.button`
   background-color: transparent;
   transition: ${props => props.theme.transition};
 
-  :hover {
+  &:hover {
     border-color: ${props => props.theme.colors.green};
     background-color: ${props => props.theme.colors.green};
     color: ${props => props.theme.colors.white};
