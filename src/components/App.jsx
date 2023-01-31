@@ -16,7 +16,7 @@ const App = () => {
       return alert(`${name} is already in contacts`);
     }
 
-    setContacts(prevState => [...prevState, contact]);
+    setContacts(prevContacts => [...prevContacts, contact]);
   };
 
   const changeFilter = e => setFilter(e.target.value);
@@ -29,7 +29,9 @@ const App = () => {
   };
 
   const deleteContact = id => {
-    setContacts(prevState => prevState.filter(contact => contact.id !== id));
+    setContacts(prevContacts =>
+      prevContacts.filter(contact => contact.id !== id)
+    );
   };
 
   const filteredContacts = getFilteredContacts();
